@@ -13,3 +13,17 @@ Login entry
     Input Password    ${passwordBoxLogin}    ${pssword}
     Sleep    2s
     Click Button    ${signinButton}
+    Sleep    2s
+
+Mistaken Login entry
+    [Arguments]    ${mailAdresi}    ${sifre}
+    Input Text    ${emailboxLogin}    ${mailAdresi}
+    Sleep    2s
+    Input Password    ${passwordBoxLogin}    ${sifre}
+    Sleep    2s
+    Click Button    ${signinButton}
+    Sleep    2s
+Validate the incorrect entry
+    ${errortext}    Get Text    ${error}
+    Should Be Equal    ${errortext}    ${error}    
+

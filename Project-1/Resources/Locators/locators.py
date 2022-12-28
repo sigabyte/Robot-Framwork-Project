@@ -1,7 +1,7 @@
 #Homepage locators
 loginLink="//a[@href='/account/login']"
 NewUserCreateLink="(//a[text()='Create account'])[1]"
-logoutBtn = "//*[text()='Log out']"
+logoutBtn = "(//a[@class='header-top__link'])[1]"
 
 
 # User create page
@@ -15,6 +15,7 @@ createButton="//*[@class='button button--cta button--solid']"
 emailboxLogin="id=CustomerForm-email"
 passwordBoxLogin="id=CustomerForm-password"
 signinButton="(//button[@class='button button--cta button--solid'])[2]"
+error = "//*[text()='Incorrect email or password.']"
 
 
 

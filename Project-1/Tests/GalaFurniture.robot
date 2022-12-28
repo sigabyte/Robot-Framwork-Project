@@ -26,6 +26,17 @@ Login Test
     Click Login Link
     Login entry
     Approved registration
+    Sleep    1s
+Negative Login Test
+    [Documentation]    Login test with wrong credentials
+     Click Login Link
+     Mistaken Login entry    snadega@gmal.com    1453
+     Validate the incorrect entry
+
+
+
+
+
 
 
 
