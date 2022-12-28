@@ -9,6 +9,9 @@ Resource    ../Keywords/RegisterPage.robot
 
 *** Keywords ***
 Click Create User link
-    Click Link    ${NewUserCreateLink}  
+    Click Link    ${NewUserCreateLink}
+Click Login Link
+    Click Link    ${loginLink}
+      
 
     

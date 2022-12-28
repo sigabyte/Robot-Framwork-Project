@@ -1,5 +1,5 @@
 url='https://www.galafurn.com'
 browser="Chrome"
 
-userName="sanadiegaz1010101@gmail.com"
+userName="sanadiegazaza@gmail.com"
 pssword="123#456"
