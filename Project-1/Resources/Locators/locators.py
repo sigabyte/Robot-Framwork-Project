@@ -15,7 +15,7 @@ createButton="//*[@class='button button--cta button--solid']"
 emailboxLogin="id=CustomerForm-email"
 passwordBoxLogin="id=CustomerForm-password"
 signinButton="(//button[@class='button button--cta button--solid'])[2]"
-error = "//*[text()='Incorrect email or password.']"
+error = "//li[text()='Incorrect email or password.']"
 
 
 
