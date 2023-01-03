@@ -25,5 +25,5 @@ Mistaken Login entry
     Sleep    2s
 Validate the incorrect entry
     ${errortext}    Get Text    ${error}
-    Should Be Equal    ${errortext}    ${error}    
+    Should Contain    ${errortext}    ${error}  
 

@@ -17,8 +17,9 @@ Click Login Link
 Click Search Button
     Click Button    ${searchButton}
     Sleep    2s
-Searching Room in searchbox
-    Input Text    ${searchBoxInput}    room
+Product search in searchbox
+    [Arguments]    ${productName}
+    Input Text    ${searchBoxInput}    ${productName}
     Press Keys    ${searchBoxInput}    ENTER
     Sleep    3s
 
@@ -26,6 +27,12 @@ Unavailable product searching
     Input Text    ${searchBoxInput}    cucumber
     Press Keys    ${searchBoxInput}    ENTER
     Sleep    2s
+
+Hower Homeoffice title and click Desk
+    Mouse Over    ${homeofficeLocator}
+    Click Link    ${deskLocator}
+
+
       
 
     

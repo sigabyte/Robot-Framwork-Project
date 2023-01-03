@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    collections
+Library    String
 
 Variables    ../Locators/locators.py
 Variables    ../TestData/testdata.py
@@ -10,7 +11,10 @@ Variables    ../TestData/testdata.py
 
 Validate Seacrh success
     ${SeacrhResult}    Get Text    ${searchResultActual}
-    Should Contain    ${SeacrhResult}    results found for “room”
+    #Should Contain    ${SeacrhResult}    results found for “room”
+    ${strArray}    Split String    ${SeacrhResult}
+    Should Be True    ${strArray}[0]>0
+    
 
 Sort the result's price in ascending
     Select From List By Value    ${priceDropBox}    price-ascending
@@ -19,7 +23,7 @@ Sort the result's price in ascending
 Go to first product's details page
     Click Link    ${firstProductInSearchpage}
 
-Lists products prices
+Lists products prices into console
     # Liste elemanlarini $ ile veya @ ile tanimlayabilirim
     @{productlists}    Get WebElements    ${productsLinksLocator}
     
