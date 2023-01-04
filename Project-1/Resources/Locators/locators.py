@@ -6,6 +6,8 @@ searchButton= "//button[@aria-controls='SearchBar-header-top']"
 searchBoxInput="(//input[@name='q'])[1]"
 homeofficeLocator = "(//div[@class='header-menu__summary-container'])[6]"
 deskLocator="(//a[@href='/collections/desk'])[2]"
+LivingRoomSetFirstProduct = "//ul[@id='splide02-list']/li[9]"
+
 
 # User create page
 firstNmeBox="id=CreateCustomerForm-firstname"
@@ -29,10 +31,18 @@ productsLinksLocator = "//li[@class='collection__grid-item']"
 
 #product page locators
 productTitle= "//h1"
+addProductToCart= "name = add"
+cartLink="id=cart-button"
 
 # CategoryPage Locators
-priceSekmesi = "(//span[@class='filter-group-summary__label'])[3]"
-maxFiyatInput = "//input[@name='filter.v.price.lte']"
+priceTag = "(//span[@class='filter-group-summary__label'])[3]"
+maxPriceInput = "//input[@name='filter.v.price.lte']"
+ProductsTitles = "//div[@class='product-card__title group-hover:text-primary-accent']"
+
+# CartPage Locators
+removeLink = "//a[@class='underline text-primary-text-80 font-navigation text-xs inline-block']"
+emptyCart = "//p[@class='cart-items__empty-text']"
+
 
 
 

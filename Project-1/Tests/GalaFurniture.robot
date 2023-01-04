@@ -11,6 +11,7 @@ Resource    ../Resources/Keywords/loginPage.robot
 Resource    ../Resources/Keywords/searchPage.robot
 Resource    ../Resources/Keywords/productPage.robot
 Resource    ../Resources/Keywords/categoryPage.robot
+Resource    ../Resources/Keywords/cartPage.robot
 
 
 Test Setup    Open Browser    ${url}    ${browser}  
@@ -23,6 +24,7 @@ Craeate User
      Create new user
      Sleep    3s
      Approved registration
+     
 Positive Login Test
     [Documentation]    Login with an active username and password
 
@@ -30,6 +32,7 @@ Positive Login Test
     Login entry
     Approved registration
     Sleep    1s
+
 Negative Login Test
     [Documentation]    Login test with wrong credentials
      Click Login Link
@@ -45,17 +48,28 @@ Positive Search testing
     Lists products prices into console
     Goto details page of the cheapest product
     #Go to first product's details page
-    Validate the product name as same with parameter
+    Validate the product name as same with parameter    Domina Jar    
 
 Negative Search Testing
     [Documentation]    Irrelevant searching test
     Click Search Button
     Unavailable product searching
     Validate Irrelavent Product Search  
+    
 List products below 400$
     Hower Homeoffice title and click Desk
-    Validate the page accuracy with title
+    Validate the matching of the page and the title
     Use Price Filter with parameter
+    Print out the list of products on console
+
+Add product to the cart and remove product from cart
+    Click the first product of Living Room category in homepage
+    Click to add to cart button
+    Click view my cart button
+    Remove the product from the cart
+    Validate the cart is empty
+
+
 
 
 

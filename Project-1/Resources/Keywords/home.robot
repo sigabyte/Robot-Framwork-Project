@@ -32,6 +32,9 @@ Hower Homeoffice title and click Desk
     Mouse Over    ${homeofficeLocator}
     Click Link    ${deskLocator}
 
+Click the first product of Living Room category in homepage
+    Click Element    ${LivingRoomSetFirstProduct}
+
 
       
 
