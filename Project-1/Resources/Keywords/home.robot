@@ -35,6 +35,28 @@ Hower Homeoffice title and click Desk
 Click the first product of Living Room category in homepage
     Click Element    ${LivingRoomSetFirstProduct}
 
+Go to bottom of the homepage
+    Execute Javascript    window.scrollTo(0,10000) 
+    Sleep    3s  
+Enter email addres
+    Input Text    ${newsBulletininput}    ${userName}
+    Press Keys    ${newsBulletininput}    ENTER
+    Sleep    30s
+Validate the subscription  
+    ${validationText}    Get Text    ${subscriptionValidate}
+    Should Contain    ${validationText}    Thanks
+Click the address link
+    Click Link    ${addressLink}
+    
+Check Google Map if it opens
+    
+    ${resultBool}    Run Keyword And Return Status    Element Should Be Visible    Accept All
+    Run Keyword If    ${resultBool}    Click Element    ${googleCookieBtn}
+       
+
+    ${googleMap}    Get Location    
+    Should Contain    ${googleMap}    google         
+
 
       
 

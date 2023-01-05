@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    GALA Furniture Project
 Library    SeleniumLibrary
+Library    ../Library/myLibrary.py
 
 Variables    ../Resources/Locators/locators.py
 Variables    ../Resources/TestData/testdata.py
@@ -24,7 +25,7 @@ Craeate User
      Create new user
      Sleep    3s
      Approved registration
-     
+
 Positive Login Test
     [Documentation]    Login with an active username and password
 
@@ -68,6 +69,21 @@ Add product to the cart and remove product from cart
     Click view my cart button
     Remove the product from the cart
     Validate the cart is empty
+
+Subscribe to New Bulletin
+    Go to bottom of the homepage
+    Enter email addres
+    Validate the subscription
+
+Validate the address if it opens in Google Map
+    Go to bottom of the homepage
+    Click the address link
+    Check Google Map if it opens
+
+    
+
+
+
 
 
 

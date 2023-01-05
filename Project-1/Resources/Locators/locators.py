@@ -7,6 +7,9 @@ searchBoxInput="(//input[@name='q'])[1]"
 homeofficeLocator = "(//div[@class='header-menu__summary-container'])[6]"
 deskLocator="(//a[@href='/collections/desk'])[2]"
 LivingRoomSetFirstProduct = "//ul[@id='splide02-list']/li[9]"
+newsBulletininput="id=Email-footer-newsletter-section"
+subscriptionValidate="//p[text()='Thanks for subscribing']"
+addressLink="//a[text()='11818 Harry Hines Blvd #216, Farmer Branch, TX 75234']"
 
 
 # User create page
@@ -32,7 +35,7 @@ productsLinksLocator = "//li[@class='collection__grid-item']"
 #product page locators
 productTitle= "//h1"
 addProductToCart= "name = add"
-cartLink="id=cart-button"
+cartLink="//button[@id='AddToCart-template--15826732384409__product']"
 
 # CategoryPage Locators
 priceTag = "(//span[@class='filter-group-summary__label'])[3]"
@@ -40,9 +43,11 @@ maxPriceInput = "//input[@name='filter.v.price.lte']"
 ProductsTitles = "//div[@class='product-card__title group-hover:text-primary-accent']"
 
 # CartPage Locators
-removeLink = "//a[@class='underline text-primary-text-80 font-navigation text-xs inline-block']"
+removeLink = "//cart-remove-button[@id='Remove-1']"
 emptyCart = "//p[@class='cart-items__empty-text']"
 
+#Google page locators
+googleCookieBtn="(//span[@jsname='V67aGc'])[1]"
 
 
 
